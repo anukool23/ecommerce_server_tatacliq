@@ -2,10 +2,10 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const GithubStrategy = require("passport-github2").Strategy;
 const FacebookStrategy = require("passport-facebook").Strategy;
 const passport = require("passport");
+require("dotenv").config();
 
-const GOOGLE_CLIENT_ID =
-  "523132920496-o6eup09mmddj5rjqm3559jt1r27jshq5.apps.googleusercontent.com";
-const GOOGLE_CLIENT_SECRET = "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";
+const GOOGLE_CLIENT_ID =process.env.GOOGLE_CLIENT_ID;
+const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 
 passport.use(
   new GoogleStrategy(
